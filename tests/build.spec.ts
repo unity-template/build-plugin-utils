@@ -7,12 +7,12 @@ describe('simple build test suite', () => {
     return await build({
       args: {},
       eject: false,
-      rootDir: path.join(__dirname, 'fixtures/basic-spa/'),
-      plugins: [path.join(__dirname, 'fixtures/defaultConfig.ts')],
+      rootDir: path.join(__dirname, 'fixtures/basic-utils/'),
+      plugins: [path.join(__dirname, '../src/index.ts')],
       getBuiltInPlugins: () => [],
     });
   });
   test('check output source', () => {
-    expect(fs.existsSync(path.join(__dirname, 'fixtures/basic-spa/build/index.js')));
+    expect(fs.existsSync(path.join(__dirname, 'fixtures/basic-utils/build/index.js')));
   });
 });

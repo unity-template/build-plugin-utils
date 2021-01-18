@@ -15,7 +15,11 @@
     "test": "jest",
     "coverage": "codecov"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unity-template/build-plugin-utils.git"
+  },
+  "author": "genluo",
   "license": "MIT",
   "devDependencies": {
     "@alib/build-scripts": "^0.1.20",

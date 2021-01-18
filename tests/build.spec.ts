@@ -2,6 +2,7 @@ import fs = require('fs-extra');
 import path = require('path');
 import { build } from '@alib/build-scripts';
 
+jest.setTimeout(30000);
 describe('simple build test suite', () => {
   beforeAll(async () => {
     return await build({
@@ -13,6 +14,6 @@ describe('simple build test suite', () => {
     });
   });
   test('check output source', () => {
-    expect(fs.existsSync(path.join(__dirname, 'fixtures/basic-utils/build/index.js')));
+    expect(fs.existsSync(path.join(__dirname, 'fixtures/basic-utils/build/index.js'))).toBe(true);
   });
 });

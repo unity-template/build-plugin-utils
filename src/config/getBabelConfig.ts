@@ -1,4 +1,4 @@
-import babelMerge from 'babel-merge';
+import * as babelMerge from 'babel-merge';
 
 export const getBabelConfig = () => {
   const baseConfig = {
@@ -13,14 +13,7 @@ export const getBabelConfig = () => {
             'transform-computed-properties',
           ],
         },
-      ],
-      [
-        require.resolve('@babel/preset-react'), {
-          pragma: 'createElement',
-          pragmaFrag: 'Fragment',
-          throwIfNamespace: false,
-        },
-      ],
+      ]
     ],
     plugins: [
       require.resolve('@babel/plugin-syntax-dynamic-import'),

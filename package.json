@@ -13,7 +13,8 @@
     "start": "tsc -w",
     "build": "rm -rf lib && tsc",
     "test": "jest",
-    "coverage": "codecov"
+    "coverage": "codecov",
+    "prepublishOnly": "npm run build",
   },
   "repository": {
     "type": "git",

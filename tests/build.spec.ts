@@ -2,7 +2,6 @@ import fs = require('fs-extra');
 import path = require('path');
 import { build } from '@alib/build-scripts';
 
-jest.setTimeout(30000);
 describe('simple build test suite', () => {
   beforeAll(async () => {
     return await build({

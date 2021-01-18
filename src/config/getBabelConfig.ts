@@ -8,7 +8,7 @@ export const getBabelConfig = () => {
         require.resolve('@babel/preset-env'),
         {
           loose: true,
-          modules: 'umd',
+          modules: false,
           include: [
             'transform-computed-properties',
           ],

@@ -1,5 +1,6 @@
 import * as CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin';
 import * as Config from 'webpack-chain';
+import * as path from 'path';
 import * as TimeFixPlugin from 'time-fix-plugin';
 import { getBabelConfig } from './getBabelConfig';
 import { PluginContext } from '@alib/build-scripts/lib';
@@ -19,7 +20,11 @@ export const getBaseWebpackConfig = (context: PluginContext, options: any): Conf
   config.target('web');
   config.context(rootDir);
   config.resolve.extensions.merge(['.js', '.json', '.jsx', '.ts', '.html']);
-  config.output.publicPath('/');
+  config.output
+  .path(path.join(rootDir, 'build'))
+  .filename('index.js')
+  .publicPath('/');
+  // TODO: 设置输出目录
 
   // webpack module config
   config.module

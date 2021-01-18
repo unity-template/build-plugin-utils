@@ -5,6 +5,7 @@
     "moduleResolution": "node",
     "alwaysStrict": true,
     "sourceMap": true,
+    "declaration": true,
     "allowSyntheticDefaultImports": true,
     "suppressImplicitAnyIndexErrors": true,
     "removeComments": false,
